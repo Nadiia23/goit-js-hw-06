@@ -8,9 +8,9 @@ const textRef = outputRef.textContent;
 
  function onInputChanges(event) {
     console.log(event.currentTarget.value);
-    outputRef.textContent = event.currentTarget.value;
+    outputRef.textContent = event.currentTarget.value.trim();
 
-    if(event.currentTarget.value === '') {
+    if(event.currentTarget.value.trim() === '') {
       outputRef.textContent = textRef;
     }
  }
