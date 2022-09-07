@@ -1,9 +1,8 @@
 const outputRef = document.querySelector('span#name-output');
 
+const inputRef = document.querySelector('#name-input');
 
- const inputRef = document.querySelector('#name-input');
-
-//  const textRef = outputRef.textContent;
+const textRef = outputRef.textContent;
 
  inputRef.addEventListener('input', onInputChanges)
 
@@ -12,7 +11,7 @@ const outputRef = document.querySelector('span#name-output');
     outputRef.textContent = event.currentTarget.value;
 
     if(event.currentTarget.value === '') {
-      return outputRef.textContent;
+      outputRef.textContent = textRef;
     }
  }
 
